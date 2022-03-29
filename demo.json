@@ -1,0 +1,12 @@
+{
+    "name": "Cactus",
+    "age": 18,
+    "skills": [
+        "Python",
+        "Java",
+        "Go",
+        "NodeJS"
+    ],
+    "has_blog": true,
+    "gf": "beautiful"
+}
