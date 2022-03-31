@@ -1,9 +1,9 @@
 import json
-from MailHandle import mailHandleIN
+from mailHandle import MailHandle
 
 path = "./simple_report_dev.json"
 Paradise_AlarmFrame = 25
-ReservedTotal_Alarm = 300 #测试数值
+ReservedTotal_Alarm = 400 #测试数值
 TrianglesPeak_Alarm = 160000
 
 def main():
@@ -30,11 +30,11 @@ def main():
 			needWarningMail = True
 
 		if needWarningMail :
-			mailHandleINt = mailHandleIN()
+			_mailHandle = MailHandle()
 			subjectContent = "Performance Alert " + newestReport['SessionName'] + newestReport['Version']
 			bodyContent = "Version: " + newestReport['Version'] + "\nData:" + \
 			newestReport['Date'] + "\n" + warningMessage
-			mailHandleINt.mail(subjectContent, bodyContent)
+			_mailHandle.mail(subjectContent, bodyContent)
 
 
 if __name__ == "__main__":

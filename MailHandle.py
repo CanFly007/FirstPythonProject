@@ -5,7 +5,7 @@ from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
 from email.header import Header
 
-class mailHandleIN(object):
+class MailHandle(object):
 	def mail(self,subjectContent,bodyContent):
 		mail_host = "smtp.163.com"
 		mail_sender = "he_garena@163.com" #改为公共邮箱
