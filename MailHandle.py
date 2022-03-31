@@ -6,17 +6,10 @@ from email.mime.multipart import MIMEMultipart
 from email.header import Header
 
 class mailHandleIN(object):
-	def __init__(self,testStr):
-		self.myStr = testStr
+	def __init__(self):
+		print("mail")
 
-	def myPrint(self):
-		print(self.myStr)
-
-	def mail(self,version,data):
-		print("Alarm mail")
-		print(version)
-		print(data)
-		return 2222
+	def mail(self,subjectContent,bodyContent):
 		mail_host = "smtp.163.com"
 		mail_sender = "he_garena@163.com" #改为公共邮箱
 		mail_license = "LSIVFTZVQYCTDTOF" #公共邮箱的license
@@ -24,13 +17,12 @@ class mailHandleIN(object):
 
 		mm = MIMEMultipart('related')
 
-		subject_content = """Performance Alert"""
-		mm["From"] = "upr_noreply"
-		#mm["To"] = "receiver_1_name<******@qq.com>,receiver_2_name<******@outlook.com>"
-		mm["To"] = "xueqiang.he@garena.com,fff_all@garena.com"
+		subject_content = subjectContent
+		mm["From"] = "upr_noreply<******@garena.com>"
+		mm["To"] = "ffff_all<ffff_all@garena.com>,testff<testff@garena.com>"
 		mm["Subject"] = Header(subject_content,'utf-8')
 
-		body_content = """你好，这是一个测试邮件！"""
+		body_content = bodyContent
 		message_text = MIMEText(body_content,"plain","utf-8")
 		mm.attach(message_text)
 
@@ -41,4 +33,3 @@ class mailHandleIN(object):
 		stp.sendmail(mail_sender, mail_receivers, mm.as_string())
 		print("邮件发送成功")
 		stp.quit()
-		return 1234
