@@ -8,5 +8,15 @@
         "NodeJS"
     ],
     "has_blog": true,
-    "gf": "beautiful"
+    "gf": "beautiful",
+    "ReportList": [
+        {
+            "SessionId":"11",
+            "Version":"1"
+        },
+        {
+            "SessionId":"12",
+            "Version":"2"
+        }
+    ]
 }
