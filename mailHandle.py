@@ -10,13 +10,13 @@ class MailHandle(object):
 		mail_host = "smtp.163.com"
 		mail_sender = "he_garena@163.com" #改为公共邮箱
 		mail_license = "LSIVFTZVQYCTDTOF" #公共邮箱的license
-		mail_receivers = ["563999075@qq.com"] #测试用，ff_all@garena.com
+		mail_receivers = ["fff_all@garena.com"]
 
 		mm = MIMEMultipart('related')
 
 		subject_content = subjectContent
 		mm["From"] = "upr_noreply<******@garena.com>"
-		mm["To"] = "ffff_all<ffff_all@garena.com>,testff<testff@garena.com>"
+		mm["To"] = "ff_all<ff_all@garena.com>"
 		mm["Subject"] = Header(subject_content,'utf-8')
 
 		body_content = bodyContent
